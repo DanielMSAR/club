@@ -1,0 +1,31 @@
+object fModulo: TfModulo
+  OldCreateOrder = False
+  Height = 460
+  HorizontalOffset = 388
+  VerticalOffset = 250
+  Width = 526
+  PPI = 96
+  object SQLTransaction: TSQLTransaction
+    Active = False
+    Database = Conection
+    left = 320
+    top = 272
+  end
+  object Conection: TMySQL50Connection
+    Connected = True
+    LoginPrompt = False
+    AfterConnect = ConectionAfterConnect
+    DatabaseName = 'club'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = 'yawn348'
+    Transaction = SQLTransaction
+    UserName = 'root'
+    HostName = 'localhost'
+    SkipLibraryVersionCheck = False
+    left = 141
+    top = 250
+  end
+end

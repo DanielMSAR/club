@@ -1,0 +1,1023 @@
+object fsocios: Tfsocios
+  Left = 388
+  Height = 700
+  Top = 250
+  Width = 875
+  BorderStyle = bsNone
+  ClientHeight = 700
+  ClientWidth = 875
+  KeyPreview = True
+  OnClose = FormClose
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  object pnl_titulo: TPanel
+    Left = 0
+    Height = 700
+    Top = 0
+    Width = 32
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 700
+    ClientWidth = 32
+    Color = 4599808
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object lbl_socios: TLabel
+      Left = -5
+      Height = 152
+      Top = 208
+      Width = 416
+      AutoSize = False
+      Caption = #13#10#13#10#13#10#13#10'ABM SOCIO'
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Orientation = 900
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object pnl_fondo: TPanel
+    Left = 32
+    Height = 700
+    Top = 0
+    Width = 843
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 700
+    ClientWidth = 843
+    TabOrder = 1
+    object Panel1: TPanel
+      Left = 0
+      Height = 50
+      Top = 0
+      Width = 843
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 50
+      ClientWidth = 843
+      Color = 16771538
+      Font.Height = -16
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      object btn_nuevo: TSpeedButton
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 112
+        Align = alLeft
+        Caption = 'NUEVO'
+        Color = 13551274
+        Flat = True
+        OnClick = btn_nuevoClick
+      end
+      object btn_editar: TSpeedButton
+        Left = 112
+        Height = 50
+        Top = 0
+        Width = 112
+        Align = alLeft
+        Caption = 'EDITAR'
+        Color = 13551274
+        Flat = True
+        OnClick = btn_editarClick
+      end
+      object btn_grabar: TSpeedButton
+        Left = 224
+        Height = 50
+        Top = 0
+        Width = 112
+        Align = alLeft
+        Caption = 'GRABAR'
+        Color = 13551274
+        Enabled = False
+        Flat = True
+        OnClick = btn_grabarClick
+      end
+      object btn_cancelar: TSpeedButton
+        Left = 336
+        Height = 50
+        Top = 0
+        Width = 112
+        Align = alLeft
+        Caption = 'CANCELAR'
+        Color = 13551274
+        Enabled = False
+        Flat = True
+        OnClick = btn_cancelarClick
+      end
+      object BTN_PRINT: TSpeedButton
+        Left = 448
+        Height = 50
+        Top = 0
+        Width = 104
+        Align = alLeft
+        Caption = 'IMPRIMIR'
+        Flat = True
+        OnClick = BTN_PRINTClick
+      end
+    end
+    object grid_socios: TDBGrid
+      Left = 0
+      Height = 368
+      Top = 50
+      Width = 843
+      Align = alTop
+      Color = clWindow
+      Columns = <      
+        item
+          SizePriority = 0
+          Title.Alignment = taCenter
+          Title.Caption = 'ID'
+          FieldName = 'IDSOCIO'
+        end      
+        item
+          SizePriority = 0
+          Title.Alignment = taCenter
+          Title.Caption = 'APELLIDOS'
+          Width = 150
+          FieldName = 'APELLIDOS'
+        end      
+        item
+          SizePriority = 0
+          Title.Alignment = taCenter
+          Title.Caption = 'NOMBRES'
+          Width = 200
+          FieldName = 'NOMBRES'
+        end      
+        item
+          SizePriority = 0
+          Title.Alignment = taCenter
+          Title.Caption = 'CUIT'
+          Width = 100
+          FieldName = 'CUIT'
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'DIRECCION'
+          Width = 250
+          FieldName = 'DIRECCION'
+        end>
+      DataSource = ds_socios
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      TabOrder = 1
+    end
+    object pnl_campos: TPanel
+      Left = 0
+      Height = 286
+      Top = 418
+      Width = 843
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 286
+      ClientWidth = 843
+      Enabled = False
+      Font.Height = -13
+      ParentFont = False
+      TabOrder = 2
+      object Label1: TLabel
+        Left = 176
+        Height = 17
+        Top = 16
+        Width = 68
+        Caption = 'APELLIDO/S'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 432
+        Height = 17
+        Top = 16
+        Width = 66
+        Caption = 'NOMBRE/S'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 216
+        Height = 17
+        Top = 48
+        Width = 81
+        Caption = 'DOCUMENTO'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 8
+        Height = 17
+        Top = 112
+        Width = 66
+        Caption = 'DIRECCIÓN'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 8
+        Height = 17
+        Top = 48
+        Width = 71
+        Caption = 'FECHA NAC.'
+        ParentColor = False
+      end
+      object edit_apellido: TDBEdit
+        Left = 248
+        Height = 25
+        Top = 16
+        Width = 176
+        DataField = 'APELLIDOS'
+        DataSource = ds_socios
+        CharCase = ecUppercase
+        MaxLength = 100
+        TabOrder = 1
+        OnKeyPress = edit_apellidoKeyPress
+      end
+      object edit_nombre: TDBEdit
+        Left = 504
+        Height = 25
+        Top = 16
+        Width = 320
+        DataField = 'NOMBRES'
+        DataSource = ds_socios
+        CharCase = ecUppercase
+        MaxLength = 100
+        TabOrder = 2
+      end
+      object DBEdit3: TDBEdit
+        Left = 80
+        Height = 25
+        Top = 112
+        Width = 368
+        DataField = 'DIRECCION'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 200
+        TabOrder = 8
+      end
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 536
+        Height = 25
+        Top = 112
+        Width = 288
+        DataField = 'IDLOCALIDAD'
+        DataSource = ds_socios
+        KeyField = 'idlocalidad'
+        ListField = 'localidad'
+        ListFieldIndex = 0
+        ListSource = ds_localidades
+        LookupCache = False
+        TabOrder = 9
+      end
+      object Label6: TLabel
+        Left = 456
+        Height = 17
+        Top = 112
+        Width = 67
+        Caption = 'LOCALIDAD'
+        ParentColor = False
+        OnClick = Label6Click
+      end
+      object Label7: TLabel
+        Left = 8
+        Height = 17
+        Top = 144
+        Width = 81
+        Caption = 'CELULAR/FIJO'
+        ParentColor = False
+      end
+      object DBEdit4: TDBEdit
+        Left = 104
+        Height = 25
+        Top = 144
+        Width = 168
+        DataField = 'CELULAR'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 10
+      end
+      object EDIT_FIJO: TDBEdit
+        Left = 280
+        Height = 25
+        Top = 144
+        Width = 168
+        DataField = 'TELEFONO'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 11
+      end
+      object Label8: TLabel
+        Left = 616
+        Height = 17
+        Top = 48
+        Width = 27
+        Caption = 'CUIT'
+        ParentColor = False
+      end
+      object Label9: TLabel
+        Left = 8
+        Height = 17
+        Top = 80
+        Width = 86
+        Caption = 'CTA BANCARIA'
+        ParentColor = False
+      end
+      object DBEdit5: TDBEdit
+        Left = 448
+        Height = 25
+        Top = 48
+        Width = 160
+        DataField = 'DNI'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 12
+        TabOrder = 4
+      end
+      object DBEdit6: TDBEdit
+        Left = 656
+        Height = 25
+        Top = 48
+        Width = 168
+        DataField = 'CUIT'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 5
+      end
+      object DBEdit7: TDBEdit
+        Left = 104
+        Height = 25
+        Top = 80
+        Width = 224
+        DataField = 'CTABCO'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 6
+      end
+      object DBEdit8: TDBEdit
+        Left = 368
+        Height = 25
+        Top = 80
+        Width = 256
+        DataField = 'CBU'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 50
+        TabOrder = 7
+      end
+      object Label10: TLabel
+        Left = 336
+        Height = 17
+        Top = 80
+        Width = 24
+        Caption = 'CBU'
+        ParentColor = False
+      end
+      object DBEdit9: TDBEdit
+        Left = 75
+        Height = 25
+        Top = 16
+        Width = 93
+        DataField = 'NUMEROSOCIO'
+        DataSource = ds_socios
+        CharCase = ecNormal
+        MaxLength = 10
+        TabOrder = 0
+      end
+      object Label11: TLabel
+        Left = 8
+        Height = 17
+        Top = 16
+        Width = 57
+        Caption = 'N° SOCIO'
+        ParentColor = False
+      end
+      object Label12: TLabel
+        Left = 629
+        Height = 17
+        Top = 80
+        Width = 67
+        Caption = 'FECHA ING.'
+        ParentColor = False
+      end
+      object DBLookupComboBox2: TDBLookupComboBox
+        Left = 304
+        Height = 25
+        Top = 48
+        Width = 136
+        DataField = 'TIPODOC'
+        DataSource = ds_socios
+        KeyField = 'idtipodoc'
+        ListField = 'documento'
+        ListFieldIndex = 0
+        ListSource = ds_documentos
+        LookupCache = False
+        TabOrder = 3
+      end
+      object Label13: TLabel
+        Left = 464
+        Height = 17
+        Top = 144
+        Width = 92
+        Caption = 'NACIONALIDAD'
+        ParentColor = False
+        OnClick = Label6Click
+      end
+      object DBLookupComboBox3: TDBLookupComboBox
+        Left = 568
+        Height = 25
+        Top = 144
+        Width = 256
+        DataField = 'IDNAC'
+        DataSource = ds_socios
+        KeyField = 'idnacionalidad'
+        ListField = 'nacionalidad'
+        ListFieldIndex = 0
+        ListSource = ds_nacionalidad
+        LookupCache = False
+        TabOrder = 12
+      end
+      object Label14: TLabel
+        Left = 8
+        Height = 17
+        Top = 176
+        Width = 127
+        Caption = 'GRUPO SANGUINEO: '
+        ParentColor = False
+        OnClick = Label6Click
+      end
+      object DBDateEdit1: TDBDateEdit
+        Left = 88
+        Height = 25
+        Top = 48
+        Width = 120
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 13
+        DataField = 'FECHANAC'
+        DataSource = ds_socios
+      end
+      object DBDateEdit2: TDBDateEdit
+        Left = 704
+        Height = 25
+        Top = 80
+        Width = 120
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 14
+        DataField = 'FECHAINGRESO'
+        DataSource = ds_socios
+      end
+      object DBLookupComboBox4: TDBLookupComboBox
+        Left = 136
+        Height = 25
+        Top = 176
+        Width = 136
+        DataField = 'IDGRUPO'
+        DataSource = ds_socios
+        KeyField = 'idgrupo'
+        ListField = 'grupo'
+        ListFieldIndex = 0
+        ListSource = ds_gruposanguineo
+        LookupCache = False
+        TabOrder = 15
+      end
+    end
+  end
+  object sql_socio: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'IDSOCIO'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'APELLIDOS'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'NOMBRES'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'FECHANAC'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'DIRECCION'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 200
+      end    
+      item
+        Name = 'IDLOCALIDAD'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CELULAR'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'TELEFONO'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'CUIT'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'CBU'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'CTABCO'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'DNI'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 12
+      end    
+      item
+        Name = 'FECHAINGRESO'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'IDNAC'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'TIPODOC'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'IDGRUPO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'IDESTADOCIVIL'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'IDPROFESION'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'CONYUGE'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 80
+      end    
+      item
+        Name = 'ACTIVO'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'NUMEROSOCIO'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end>
+    Active = True
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from socios'
+    )
+    Options = [sqoKeepOpenOnCommit, sqoAutoApplyUpdates, sqoAutoCommit]
+    Params = <>
+    left = 784
+    top = 112
+    object sql_socioIDSOCIO: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'IDSOCIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioAPELLIDOS: TStringField
+      FieldKind = fkData
+      FieldName = 'APELLIDOS'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object sql_socioNOMBRES: TStringField
+      FieldKind = fkData
+      FieldName = 'NOMBRES'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object sql_socioFECHANAC: TDateField
+      FieldKind = fkData
+      FieldName = 'FECHANAC'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioDIRECCION: TStringField
+      FieldKind = fkData
+      FieldName = 'DIRECCION'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object sql_socioIDLOCALIDAD: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDLOCALIDAD'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioCELULAR: TStringField
+      FieldKind = fkData
+      FieldName = 'CELULAR'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object sql_socioTELEFONO: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object sql_socioCUIT: TStringField
+      FieldKind = fkData
+      FieldName = 'CUIT'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioCBU: TStringField
+      FieldKind = fkData
+      FieldName = 'CBU'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object sql_socioCTABCO: TStringField
+      FieldKind = fkData
+      FieldName = 'CTABCO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object sql_socioDNI: TStringField
+      FieldKind = fkData
+      FieldName = 'DNI'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object sql_socioFECHAINGRESO: TDateField
+      FieldKind = fkData
+      FieldName = 'FECHAINGRESO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioIDNAC: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDNAC'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioTIPODOC: TLongintField
+      FieldKind = fkData
+      FieldName = 'TIPODOC'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioIDGRUPO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDGRUPO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioIDESTADOCIVIL: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDESTADOCIVIL'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioIDPROFESION: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDPROFESION'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioCONYUGE: TStringField
+      FieldKind = fkData
+      FieldName = 'CONYUGE'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object sql_socioACTIVO: TLongintField
+      FieldKind = fkData
+      FieldName = 'ACTIVO'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_socioNUMEROSOCIO: TStringField
+      FieldKind = fkData
+      FieldName = 'NUMEROSOCIO'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+  end
+  object ds_socios: TDataSource
+    DataSet = sql_socio
+    left = 524
+    top = 311
+  end
+  object sql_localidades: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idlocalidad'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'localidad'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'idprovincia'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from localidades'
+    )
+    Params = <>
+    left = 658
+    top = 205
+    object sql_localidadesidlocalidad: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'idlocalidad'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_localidadeslocalidad: TStringField
+      FieldKind = fkData
+      FieldName = 'localidad'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object sql_localidadesidprovincia: TLongintField
+      FieldKind = fkData
+      FieldName = 'idprovincia'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object ds_localidades: TDataSource
+    DataSet = sql_localidades
+    left = 658
+    top = 269
+  end
+  object sql_tipodoc: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idtipodoc'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'documento'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end>
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from tipodoc order by documento'
+    )
+    Params = <>
+    left = 316
+    top = 199
+  end
+  object ds_documentos: TDataSource
+    DataSet = sql_tipodoc
+    left = 320
+    top = 267
+  end
+  object sql_nacionalidad: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idnacionalidad'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nacionalidad'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end>
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from nacionalidades'
+      'order by nacionalidad'
+    )
+    Params = <>
+    left = 125
+    top = 185
+    object sql_nacionalidadidnacionalidad: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'idnacionalidad'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_nacionalidadnacionalidad: TStringField
+      FieldKind = fkData
+      FieldName = 'nacionalidad'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+  object ds_nacionalidad: TDataSource
+    DataSet = sql_nacionalidad
+    left = 138
+    top = 256
+  end
+  object sql_grupo: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idgrupo'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'grupo'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 50
+      end>
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from gruposanguineo'
+    )
+    Params = <>
+    left = 432
+    top = 128
+    object sql_grupoidgrupo: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'idgrupo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_grupogrupo: TStringField
+      FieldKind = fkData
+      FieldName = 'grupo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+  object ds_gruposanguineo: TDataSource
+    DataSet = sql_grupo
+    left = 432
+    top = 192
+  end
+  object fr_dssocios: TfrDBDataSet
+    DataSet = sql_socio
+    left = 784
+    top = 184
+  end
+  object report: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 771
+    top = 267
+  end
+end

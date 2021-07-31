@@ -1,0 +1,215 @@
+object fAcceso: TfAcceso
+  Left = 388
+  Height = 185
+  Top = 250
+  Width = 414
+  BorderStyle = bsNone
+  ClientHeight = 185
+  ClientWidth = 414
+  OnShow = FormShow
+  Position = poScreenCenter
+  object edit_usuario: TEdit
+    Left = 136
+    Height = 38
+    Top = 64
+    Width = 256
+    Font.Height = -21
+    OnExit = edit_usuarioExit
+    ParentFont = False
+    TabOrder = 1
+    TextHint = 'USUARIO + ENTER'
+  end
+  object pnl_titulo: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 414
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'ACCESO RESTRINGIDO'
+    ClientHeight = 50
+    ClientWidth = 414
+    Color = 9199360
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object pnl_close: TPanel
+      Left = 356
+      Height = 50
+      Top = 0
+      Width = 58
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'X'
+      Color = clBlack
+      ParentColor = False
+      TabOrder = 0
+      OnClick = pnl_closeClick
+      OnMouseEnter = pnl_closeMouseEnter
+      OnMouseLeave = pnl_closeMouseLeave
+    end
+    object Image1: TImage
+      Left = 0
+      Height = 50
+      Top = 0
+      Width = 40
+      Align = alLeft
+      AutoSize = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869634F03000089504E47
+        0D0A1A0A0000000D49484452000000280000002808060000008CFEB86D000000
+        06624B474400FF00FF00FFA0BDA79300000304494441545809ED973B68144118
+        C76F2FA7A2C8093EC8155AA885891211091626D54505DBC075E9140BD14A1251
+        10351A038A45C046B411522988A056D601F15544506C8D607C54C1031FD1F5F7
+        1DB7977177666F6776174FF0F8FF76E6BED77C37FB4A0A850EFF7859F5E7FBFE
+        616A6D07D12BCFF36ECAA463A0C1390834975563C5AC0AE555A7E31B8CFDE19C
+        AF357003DE423BD5826204D6A09DA4E67582CA419E6E2CE98C6223516EA0BBCC
+        AB90873651F4086C65ADFDDC543EF3888A11CB926107D32AE4AD2116E801AD8C
+        3B48F436B0D1197642764472BAE560412FB1AF21A2B8068B91E878431F6E81C1
+        5A5DA60CDB264C7572B3FF6F30EDD6C65D8336B5BF113C0D33201AE43002CB21
+        1F71472679D812E6BFE710B939B0ED840F9044AD877CF8D764710D1EE521FB32
+        5C18DB2CB663904A691B5C60F5FB60D23D1C5FC059691B9C67A7164DABE3FB81
+        6F1E9C95B6C10A1758C9B43ABE65F82AE0ACB40D965979184C928B7FB5C999C4
+        9EB64159E31A3BA5BD8B714E412A194F8F45D50DC43EA5C969C619100D721881
+        D4CFC11245B2D00A8A1C6AC2909DD236F893569EC07378039F41FED05DCFB819
+        FA612F7481935C1BFCCA6A57618A47C92746A338F5159CC7E104C84E3364200A
+        9B5E75EFF0F5D92E41CE2EF8083AD56CEB15A8A26BF017F63DD6C59A09E4EE83
+        B0E45DBEA519927CA08AAEC167C92BE823A93B0B81A4B91E3512C7008CA936ED
+        9C205D8377B4C11646EAF6823426C8FF22AD6CEC435007D19596433721A20661
+        DDD6C5DADA282A4D869B939D5BC0A7AA6AAC4D94AE41CC8974522D4C461976AB
+        36758E4FD7DCB81A139993E4DAE0B982F2A1CE3A780175A82AAEC6149B7A5AF9
+        DAD068C3197720AC06B65A2461555097F94A780C81E4140E287EDDCE5D08FCB1
+        23150F828B36AA8529300AAAEA7CA982DBCE05C529D00DDFC1568F48F8E38DC1
+        F78BA04A7652506D13C1DA8947B2C7C0450F480A373981CD2463735EBB6EA978
+        809861580B367AC87BFA969A40AD4B7C3F05AA26893BAD1AFEEA9C26CFFA4B9F
+        B66F0CD7BF669C7F24BB759EFE3C0AF8CC2F33FEDBFA0D86B47AD7EE285F1D00
+        00000049454E44AE426082
+      }
+    end
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 30
+    Top = 64
+    Width = 87
+    Caption = 'USUARIO'
+    Font.Height = -21
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 30
+    Top = 128
+    Width = 111
+    Caption = 'PASSWORD'
+    Font.Height = -21
+    ParentColor = False
+    ParentFont = False
+  end
+  object edit_password: TEdit
+    Left = 136
+    Height = 38
+    Top = 128
+    Width = 256
+    EchoMode = emPassword
+    Font.Height = -21
+    OnKeyPress = edit_passwordKeyPress
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 2
+    TextHint = 'PASWORD + ENTER'
+  end
+  object sql_usuario: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'idusuario'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'usuario'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'nombres'
+        DataType = ftString
+        Precision = -1
+        Size = 150
+      end    
+      item
+        Name = 'acceso'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'password'
+        DataType = ftString
+        Precision = -1
+        Size = 200
+      end>
+    Database = fModulo.Conection
+    Transaction = fModulo.SQLTransaction
+    SQL.Strings = (
+      'select * from usuario'
+      'order by usuario'
+      ''
+    )
+    Params = <>
+    left = 328
+    top = 96
+    object sql_usuarioidusuario: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'idusuario'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object sql_usuariousuario: TStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object sql_usuarionombres: TStringField
+      FieldKind = fkData
+      FieldName = 'nombres'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 150
+    end
+    object sql_usuarioacceso: TLongintField
+      FieldKind = fkData
+      FieldName = 'acceso'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object sql_usuariopassword: TStringField
+      FieldKind = fkData
+      FieldName = 'password'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 200
+    end
+  end
+end

@@ -1,0 +1,41 @@
+object localidades: Tlocalidades
+  Left = 388
+  Height = 595
+  Top = 250
+  Width = 865
+  Caption = 'localidades'
+  ClientHeight = 595
+  ClientWidth = 865
+  object pnl_titulo: TPanel
+    Left = 0
+    Height = 595
+    Top = 0
+    Width = 32
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 595
+    ClientWidth = 32
+    Color = 4599808
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object lbl_socios: TLabel
+      Left = -5
+      Height = 300
+      Top = 112
+      Width = 450
+      AutoSize = False
+      Caption = #13#10#13#10#13#10#13#10#13#10#13#10#13#10'ABM LOCALIDADES'
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Orientation = 900
+      ParentColor = False
+      ParentFont = False
+      OnClick = lbl_sociosClick
+    end
+  end
+end

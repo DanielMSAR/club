@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="Club.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="16"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="forms\uacceso.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fAcceso"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAcceso"/>
+        <TopLine Value="78"/>
+        <CursorPos X="29" Y="106"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="forms\umodulo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fModulo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uModulo"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="3" Y="35"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="forms\uprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPrincipal"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="122"/>
+        <CursorPos X="56" Y="158"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="forms\usocios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fsocios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="153"/>
+        <CursorPos X="22" Y="159"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="forms\ulocalidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="localidades"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="49" Y="14"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="124" Column="3" TopLine="122"/>
+      </Position1>
+      <Position2>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="187" Column="19" TopLine="153"/>
+      </Position2>
+      <Position3>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="186" Column="19" TopLine="152"/>
+      </Position3>
+      <Position4>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="187" Column="19" TopLine="153"/>
+      </Position4>
+      <Position5>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="170" Column="48" TopLine="151"/>
+      </Position5>
+      <Position6>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="169" Column="48" TopLine="150"/>
+      </Position6>
+      <Position7>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="170" Column="48" TopLine="151"/>
+      </Position7>
+      <Position8>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="169" Column="48" TopLine="150"/>
+      </Position8>
+      <Position9>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="170" Column="48" TopLine="151"/>
+      </Position9>
+      <Position10>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="171" Column="48" TopLine="152"/>
+      </Position10>
+      <Position11>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="172" Column="48" TopLine="153"/>
+      </Position11>
+      <Position12>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="173" Column="48" TopLine="154"/>
+      </Position12>
+      <Position13>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="174" Column="48" TopLine="155"/>
+      </Position13>
+      <Position14>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="175" Column="48" TopLine="156"/>
+      </Position14>
+      <Position15>
+        <Filename Value="forms\ulocalidades.pas"/>
+      </Position15>
+      <Position16>
+        <Filename Value="forms\ulocalidades.pas"/>
+        <Caret Line="35" Column="3"/>
+      </Position16>
+      <Position17>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="83" Column="3" TopLine="65"/>
+      </Position17>
+      <Position18>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="38" Column="11" TopLine="21"/>
+      </Position18>
+      <Position19>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="41" Column="11" TopLine="21"/>
+      </Position19>
+      <Position20>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="147" Column="27" TopLine="107"/>
+      </Position20>
+      <Position21>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="141" Column="5" TopLine="115"/>
+      </Position21>
+      <Position22>
+        <Filename Value="forms\uprincipal.pas"/>
+        <Caret Line="144" Column="16" TopLine="116"/>
+      </Position22>
+      <Position23>
+        <Filename Value="forms\umodulo.pas"/>
+        <Caret Line="15" Column="34"/>
+      </Position23>
+      <Position24>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="176" Column="48" TopLine="157"/>
+      </Position24>
+      <Position25>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="177" Column="48" TopLine="158"/>
+      </Position25>
+      <Position26>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="178" Column="48" TopLine="159"/>
+      </Position26>
+      <Position27>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="177" Column="48" TopLine="158"/>
+      </Position27>
+      <Position28>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="178" Column="48" TopLine="159"/>
+      </Position28>
+      <Position29>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="179" Column="48" TopLine="160"/>
+      </Position29>
+      <Position30>
+        <Filename Value="forms\usocios.pas"/>
+        <Caret Line="185" Column="48" TopLine="166"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
