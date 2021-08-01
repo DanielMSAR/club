@@ -1,18 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : LocalMariaDB
- Source Server Type    : MariaDB
- Source Server Version : 100505
- Source Host           : localhost:3306
- Source Schema         : club
-
- Target Server Type    : MariaDB
- Target Server Version : 100505
- File Encoding         : 65001
-
- Date: 01/08/2021 19:19:44
-*/
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
